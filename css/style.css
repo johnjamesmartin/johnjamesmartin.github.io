@@ -1,0 +1,179 @@
+/*$col-0: adjust-hue(darken(#4b307b, 25%), -40%);*/
+a {
+  color: white; }
+
+body {
+  /*
+  background-color: $col-5;
+  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");*/
+  background-color: #222222;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
+.computer-turn {
+  color: white; }
+
+.container {
+  margin-top: 50px;
+  text-align: center; }
+
+.elem-cell-button {
+  background: none;
+  border: 0;
+  color: #f7303b;
+  font-family: "Cutive Mono", monospace;
+  font-size: 20px;
+  height: 100%;
+  margin-top: -20px;
+  outline: none;
+  width: 100%;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */ }
+
+.elem-cell-button:hover, .elem-cell-button:active {
+  background-color: #e1e1e1; }
+
+.elem-div-titlescreen-container {
+  border: 0px solid #d4d4d4;
+  margin-top: -30px; }
+
+.elem-grid {
+  border: 0;
+  height: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px; }
+
+.elem-grid td {
+  border: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+  width: 33%; }
+
+.elem-grid-cell {
+  border: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */ }
+
+.elem-grid-border-right {
+  border-right: 1px solid gray; }
+
+.elem-grid-border-top {
+  border-top: 1px solid gray; }
+
+.elem-output-feedback {
+  color: #f7303b;
+  font-size: 22px;
+  font-weight: 100; }
+
+.elem-output-turn {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 100; }
+
+.elem-p-footer {
+  color: white;
+  font-size: 8.5px;
+  font-weight: 200; }
+
+.elem-score {
+  border: 0;
+  color: #f3f3f3;
+  font-size: 17px;
+  font-weight: 100;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 300px; }
+
+.elem-tb-menu-btns {
+  border: 0px solid #d4d4d4;
+  width: 100%; }
+
+.elem-titlescreen-menu-btn {
+  border-radius: 0;
+  font-size: 16.8px;
+  margin: 1px; }
+
+.elem-titlescreen-menu-btn, .elem-ui-btn {
+  background-color: #d4d4d4;
+  border: 0;
+  box-shadow: 1px 1px 1px #1a1a1a;
+  color: #1a1a1a;
+  font-weight: 100;
+  padding: 10px; }
+
+.elem-titlescreen-menu-btn:active, .elem-titlescreen-menu-btn:focus, .elem-titlescreen-menu-btn:hover, .elem-ui-btn:active, .elem-ui-btn:focus, .elem-ui-btn:hover {
+  background-color: #c8c8c8;
+  border: 0;
+  color: white; }
+
+.elem-ui-btn {
+  display: none; }
+
+.game-draw {
+  color: white; }
+
+.game-loss {
+  color: #f7303b; }
+
+.game-win {
+  color: #7df730; }
+
+.game-win-highlight-row {
+  color: #ff8828;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de; }
+
+.player-turn {
+  color: white; }
+
+@media (max-width: 790px) {
+  .elem-output-turn {
+    color: white;
+    font-weight: 100;
+    font-size: 45px; }
+  .elem-titlescreen-menu-btn {
+    border-radius: 0;
+    font-size: 16.8px;
+    margin: 1px; } }

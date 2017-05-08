@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata -->
+	<title>Tic Tac Toe</title>
+	<meta charset="utf-8">
+	<meta name="author" content="John Martin">
+	<meta name="description" content="A Tic Tac Toe JS game for a FreeCodeCamp track">
+	<meta name="keywords" content="tic tac toe, game, freecodecamp">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+	
+	<!-- Styles -->
+	<link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEiTGABIjwQAcLugAFyjYABQo0QAbLucAGSzkABos5AAYKuEAITHuAB4v6wAUKNAAGSzjABos4wAYK94AGCrgABkq4AAWKdQAFCfRACEy8QAWJswAHTDuABsu6wAcLusAFCPEABIkyAASI8MAFSjUABYo1AAXKt0AFSXMABgq3QAXKdgAGy3rABMmyQAZK+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAAACAAAAAAABIxoAAAAAAAAjIxkAAAAAAB8VFQAAAAAVFRUAAAAAAAAABQUTAAATBQwAAAAAAAAAAAASEhwdHBwAAAAAAAAAAAAAACEhIQQAAAAAAAAAAAAAAAAgHiAPAAAAAAAAAAAAAAAkJAkQEBEAAAAAAAAAAAANDgcAAAgICAAAAAAAAAADAwYAAAAABgYDAAAAAAALIhcAAAAAAAAiGAoAAAAAABYAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA7/cAAMfjAADjxwAA8Y8AAPgfAAD8PwAA/D8AAPgfAADxjwAA48cAAMfjAADv9wAA//8AAP//AAA=" type="image/x-icon" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono"/>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+	<link rel="stylesheet" href="https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css"/>
+	<link rel="stylesheet" href="https://getbootstrap.com/examples/sticky-footer/sticky-footer.css"/>
+	<link rel="stylesheet" href="css/style.css" media="all"/>
+	
+	<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	
+	<!-- JavaScripts - Head -->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+</head>
+<body>
+	<!-- Container -->
+
+    <div id="elem-score" class="elem-score">
+    </div>
+    <table class="hud">
+      <tr>
+        <td>
+          <button class="elem-ui-btn" id="elem-change-symbol-btn"><i class="fa fa-times-circle-o" aria-hidden="true"></i> change</button>
+          <button class="elem-ui-btn" id="elem-restart-btn"><i class="fa fa-refresh" aria-hidden="true"></i> restart</button>
+          <button class="elem-ui-btn" id="elem-share-btn"><i class="fa fa-share-alt" aria-hidden="true"></i> share</button><br>
+        <td>
+    </table>
+    <div class="container" id="elem-container">
+      <h1 id="elem-output-turn" class="elem-output-turn">Tic Tac Toe </h1>
+      <h2 id="elem-output-feedback" class="elem-output-feedback"><br></h2><br>
+    </div>
+	<!-- JavaScripts - Body -->
+	<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/script.js"></script>
+	
+</body>
+</html>
